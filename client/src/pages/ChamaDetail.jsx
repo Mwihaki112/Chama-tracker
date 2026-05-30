@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useAuth } from '../context/AuthContext';
 import { getChama, getContributions, getPayouts, joinChama, deleteChama } from '../services/api';
-import { FaUsers, FaMoneyBillWave, FaCalendarAlt, FaTrash } from 'react-icons/fa';
+import { FaUsers, FaMoneyBillWave, FaCalendarAlt, FaTrash, FaEdit } from 'react-icons/fa';
 
 const ChamaDetail = () => {
   const { id } = useParams();

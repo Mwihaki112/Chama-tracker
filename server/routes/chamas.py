@@ -121,6 +121,11 @@ def delete_chama(chama_id):
     if not membership:
         return jsonify({"error": "Only admins can delete a chama"}), 403
     
+    # Delete all related memberships, contributions, and payouts
+    Membership.query.filter_by(chama_id=chama_id).delete()
+    Contribution.query.filter_by(chama_id=chama_id).delete()
+    Payout.query.filter_by(chama_id=chama_id).delete()
+    
     db.session.delete(chama)
     db.session.commit()
 

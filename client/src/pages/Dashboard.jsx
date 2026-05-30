@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useAuth } from '../context/AuthContext';
 import { getChamas } from '../services/api';
+import { getMyChamas } from '../services/api';
 import ChamaCard from '../components/ChamaCard';
 import { FaPlus } from 'react-icons/fa';
 
