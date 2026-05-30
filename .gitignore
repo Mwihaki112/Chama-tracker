@@ -1,0 +1,11 @@
+# Server-side .gitignore
+server/.env
+server/__pycache__/
+server/*.pyc
+server/chama.db
+server/migrations/
+
+# Client-side .gitignore
+client/node_modules/
+client/dist/
+client/.env
