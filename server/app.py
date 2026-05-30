@@ -32,7 +32,10 @@ def create_app():
     app.register_blueprint(chamas_bp, url_prefix='/chamas')
     app.register_blueprint(contributions_bp, url_prefix='/chamas')
     app.register_blueprint(payouts_bp, url_prefix='/chamas')
-
+    
+    with app.app_context():
+        db.create_all()
+        
     return app
 
 if __name__ == '__main__':
